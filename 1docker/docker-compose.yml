@@ -1,0 +1,15 @@
+version: '3'
+services:
+  python-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: python_container
+    command: ["python3.10", "--version"]
+
+  java-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.kotlin
+    container_name: java_container
+    # Domyślne polecenie CMD jest już ustawione w Dockerfile (gradle run)
