@@ -1,0 +1,31 @@
+# Dockerfile.kotlin
+FROM ubuntu:24.04
+
+# Instalacja JDK 8 oraz narzędzi
+RUN apt-get update && \
+    apt-get install -y openjdk-8-jdk wget unzip && \
+    rm -rf /var/lib/apt/lists/*
+
+# Instalacja Kotlin (wersja 1.7.10)
+RUN wget https://github.com/JetBrains/kotlin/releases/download/v1.7.10/kotlin-compiler-1.7.10.zip && \
+    unzip kotlin-compiler-1.7.10.zip -d /opt && \
+    ln -s /opt/kotlinc/bin/kotlin /usr/local/bin/kotlin && \
+    rm kotlin-compiler-1.7.10.zip
+
+# Instalacja Gradle (wersja 8.2)
+RUN wget https://services.gradle.org/distributions/gradle-8.2-bin.zip && \
+    unzip gradle-8.2-bin.zip -d /opt && \
+    ln -s /opt/gradle-8.2/bin/gradle /usr/local/bin/gradle && \
+    rm gradle-8.2-bin.zip
+
+# Ustawienie katalogu roboczego
+WORKDIR /app
+
+# Opcjonalnie utwórz katalog build, aby upewnić się, że struktura jest dostępna
+RUN mkdir -p /app/build/kotlin/compileKotlin/cacheable/caches-jvm/jvm/kotlin
+
+# Kopiowanie plików projektu do obrazu
+COPY . /app
+
+# Domyślnie uruchomienie aplikacji przy użyciu Gradle
+CMD ["gradle", "run"]
