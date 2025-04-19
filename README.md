@@ -1,5 +1,7 @@
 ## Zadanie I — Docker + Gradle + Java/Kotlin
 
+link do dockerhuba: https://hub.docker.com/repositories/mateuszpalczynski0
+
 ✅ **3.0** obraz ubuntu z Pythonem w wersji 3.10  
 
 ✅ **3.5** obraz ubuntu:24.04 z Javą w wersji 8 oraz Kotlinem  
