@@ -1,0 +1,46 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+nav {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.products-list {
+  display: grid;
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.cart-item {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #eee;
+}
