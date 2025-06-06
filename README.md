@@ -80,7 +80,7 @@ asercji
 
 ✅ **4.0** Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
 
-❌ **4.5** Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
+✅ **4.5** Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
 
 ❌ **5.0** Należy uruchomić testy funkcjonalne na Browserstacku
 
